@@ -1,3 +1,4 @@
+
 export default function() {
 
   // These comments are here to help you get started. Feel free to delete them.
@@ -23,9 +24,8 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.2.x/shorthands/
   */
-  this.get('/monsters', function() {
-    return {
-      data: [{
+var datas = 
+        [{
         type: 'monsters',
         id: 1,
         attributes: {
@@ -53,42 +53,18 @@ export default function() {
           blurb: "Mew  is one of the fictional species of creatures from Nintendo's and Game Freak's Pokémon media franchise created by Satoshi Tajiri. Mew is a small, pink, Psychic-type Mythical Pokémon."
         }}
 
-      ]
-    };
+      ];
+
+  this.get('/monsters', function() {
+    return {data:datas};
   });
 
-  this.get('/monsters/details/', function() {
-    return {
-      data: [{
-        type: 'monsters',
-        id: 1,
-        attributes: {
-          title: 'Charmender',
-          level: '12',
-          image: '/images/charmender.png',
-          blurb: 'Along with Bulbasaur and Squirtle, Charmander is one of three starter Pokémon of Kanto available at the beginning of Pokémon Red, Green, Blue, FireRed, and LeafGreen.'
-        }},
-        {
-        type: 'monsters',
-        id: 2,
-        attributes: {
-          title: 'pikachu',
-          level: '20',
-          image: '/images/pikachu.png',
-          blurb: "Pikachu is popularly known as the mascot of the Pokémon franchise and a major representative of Nintendo's collective mascots."
-        }},
-        {
-        type: 'monsters',
-        id: 3,
-        attributes: {
-          title: 'mew',
-          level: '40',
-          image: '/images/mew.jpg',
-          blurb: "Mew  is one of the fictional species of creatures from Nintendo's and Game Freak's Pokémon media franchise created by Satoshi Tajiri. Mew is a small, pink, Psychic-type Mythical Pokémon."
-        }}
 
-      ]
-    };
+  this.get('/monsters/:details_id', function(db,request) {
+    //console.log(data);
+    var id = request.params.details_id;
+    console.log(id);
+    return {data:datas[id-1]};
   });
 
 

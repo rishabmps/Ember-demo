@@ -4,6 +4,8 @@
 <div class="col-md-6 well">
 	{{#each model as |item|}}
 	<li class="well">
+
+
 	{{#link-to "monsters.details" item.id}} {{item.title}} {{/link-to}}
 	</li>
 {{/each}}
