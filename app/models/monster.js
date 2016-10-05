@@ -5,4 +5,5 @@ export default DS.Model.extend({
   level: attr('string'),
   image: attr('string'),
   blurb: attr('string')
+  
 });
