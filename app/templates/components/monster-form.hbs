@@ -1,10 +1,13 @@
 
+
+
 <div class="col-md-4 well">
-	Name: {{model.title}} 	<br>
+	Name: {{input value=model.title}} 	<br>
 	Level: {{model.level}} <br>
 	<img src={{model.image}} class="img-responsive img-thumbnail" >
-	{{#link-to 'monsters.details.edit' model tagName="button"}}Edit Monster{{/link-to}}
+	<button {{action 'save'}} class="btn-default">Save</button>
+
 </div>
-{{outlet}}
 
 
+{{yield}}
