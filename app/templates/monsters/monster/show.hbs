@@ -1,0 +1,11 @@
+
+{{#liquid-bind model class="liquid-monster" as |newMonster|}}
+<div class="well">
+	
+
+	<span class="name"> Name: {{newMonster.title}} </span>	<br>
+	<span class="level">Level: {{newMonster.level}}</span> <br>
+	<img src={{newMonster.image}} class="img-responsive img-thumbnail" >
+	{{#link-to 'monsters.monster.edit' model tagName="button"}}Edit Monster{{/link-to}}
+</div>
+{{/liquid-bind}}

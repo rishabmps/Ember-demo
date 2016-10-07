@@ -3,3 +3,21 @@ $roboto-font-path: '../assets/';
 
 // Materialize styles
 @import "materialize";
+
+.monster-image {
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+}
+.monster {
+  width: 100%;
+  
+  margin: 3px;
+  padding: 3px;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+.monster img {
+  max-width: 30px;
+  max-height: 40px;
+}

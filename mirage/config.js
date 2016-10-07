@@ -10,7 +10,7 @@ export default function() {
   */
 
   // this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
-   this.namespace = '';    // make this `api`, for example, if your API is namespaced
+   //this.namespace = '';    // make this `api`, for example, if your API is namespaced
   // this.timing = 400;      // delay for each request, automatically set to 0 during testing
 
   /*
@@ -24,7 +24,7 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.2.x/shorthands/
   */
-var datas = 
+var datas =
         [{
         type: 'monsters',
         id: 1,
@@ -55,23 +55,9 @@ var datas =
 
       ];
 
-  this.get('/monsters', function() {
-    return {data:datas};
-  });
-
-
-  this.get('/monsters/:details_id', function(db,request) {
-    //console.log(data);
-    var id = request.params.details_id;
-    console.log(id);
-    return {data:datas[id-1]};
-  });
-  this.patch('/monsters/:id', function(db,request) {
-    //console.log(data);
-   
-    var id = request.params.id;
-    console.log(db);
-  });
-  this.post('/monsters/1');
-  this.del('/monsters/1');
+  this.get('/monsters');
+  this.post('/monsters');
+  this.get('/monsters/:id');
+  this.patch('/monsters/:id');
+  this.del('/monsters/:id');
 }

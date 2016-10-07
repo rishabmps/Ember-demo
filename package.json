@@ -47,10 +47,12 @@
     "ember-materialize-shim": "0.2.3",
     "ember-modal-dialog": "0.8.8",
     "ember-new-computed": "1.0.3",
+    "ember-one-way-controls": "1.1.1",
     "ember-radio-button": "1.0.7",
     "ember-resolver": "^2.0.3",
     "ember-truth-helpers": "1.2.0",
     "ember-welcome-page": "^1.0.1",
+    "liquid-fire": "0.26.1",
     "loader.js": "^4.0.1",
     "node-sass": "3.4.2"
   }

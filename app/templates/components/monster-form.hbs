@@ -1,13 +1,12 @@
-
-
-
-<div class="col-md-4 well">
-	Name: {{input value=model.title}} 	<br>
-	Level: {{model.level}} <br>
-	<img src={{model.image}} class="img-responsive img-thumbnail" >
+<div class="well">
+	<span class="name"> Name: {{input value=model.title update=(action (mut model.name))}}</span><br>
+	<span class="level">Level: {{input value=model.level update=(action (mut model.level))}}</span><br>
+    <img src={{model.image}} class="img-responsive img-thumbnail"/><br>
+	Image Source: {{input value=model.image update = (action (mut model.image))}}
+	Blurb: {{input value = model.blurb update=(action (mut model.blurb))}}
 	<button {{action 'save'}} class="btn-default">Save</button>
 
 </div>
+	
 
 
-{{yield}}

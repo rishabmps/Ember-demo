@@ -1,15 +1,24 @@
 
 
 
-<div class="col-md-6 well">
-	{{#each model as |item|}}
-	<li class="well">
-
-
-	{{#link-to "monsters.monster" item.id}} {{item.title}} {{/link-to}}
-	</li>
-{{/each}}
-		
+<div class="col-md-6 well ">
+	{{#link-to 'monsters.new' tagName="button"}}New Monster{{/link-to}}
+	
+	<div class="monster-list " style="margin:20px;">
+		{{#each model as |item|}}
+		  {{#link-to 'monsters.monster.show' item  tagName='li' class="monster list-unstyled"}}
+          <span class="monster-image">
+            <img src={{item.image}} />
+          </span>
+          <span class="monster-info">
+            lvl {{item.level}} {{item.title}}
+          </span>
+        {{/link-to}}
+		{{/each}}
+	</div>
 </div>
 
-{{outlet}}
+<div class="col-md-4 ">
+	{{liquid-outlet}}
+</div>
+
