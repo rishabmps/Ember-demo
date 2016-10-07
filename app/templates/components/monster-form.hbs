@@ -1,9 +1,9 @@
 <div class="well">
-	<span class="name"> Name: {{input value=model.title update=(action (mut model.name))}}</span><br>
-	<span class="level">Level: {{input value=model.level update=(action (mut model.level))}}</span><br>
+	<span class="name"> Name: {{one-way-input value=model.title update=(action (mut model.title))}}</span><br>
+	<span class="level">Level: {{one-way-input value=model.level update=(action (mut model.level))}}</span><br>
     <img src={{model.image}} class="img-responsive img-thumbnail"/><br>
-	Image Source: {{input value=model.image update = (action (mut model.image))}}
-	Blurb: {{input value = model.blurb update=(action (mut model.blurb))}}
+	Image Source: {{one-way-input value=model.image update = (action (mut model.image))}}
+	Blurb: {{one-way-input value = model.blurb update=(action (mut model.blurb))}}
 	<button {{action 'save'}} class="btn-default">Save</button>
 
 </div>
