@@ -1,11 +1,11 @@
 <div class="well">
-	<span class="name"> Name: {{one-way-input value=model.title update=(action (mut model.title))}}</span><br>
-	<span class="level">Level: {{one-way-input value=model.level update=(action (mut model.level))}}</span><br>
-    <img src={{model.image}} class="img-responsive img-thumbnail"/><br>
-	Image Source: {{one-way-input value=model.image update = (action (mut model.image))}}
-	Blurb: {{one-way-input value = model.blurb update=(action (mut model.blurb))}}
+	<span class="name"> Name: {{one-way-input value=changeset.title update=(action (mut changeset.title))}}</span><br>
+	<span class="level">Level: {{one-way-input value=changeset.level update=(action (mut changeset.level))}}</span><br>
+    <img src={{changeset.image}} class="img-responsive img-thumbnail"/><br>
+	Image Source: {{one-way-input value=changeset.image update = (action (mut changeset.image))}}
+	Blurb: {{one-way-input value = changeset.blurb update=(action (mut changeset.blurb))}}
 	<button {{action 'save'}} class="btn-default">Save</button>
-
+	<button {{action 'rollback'}} class="btn-default">Cancel</button>
 </div>
 	
 

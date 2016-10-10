@@ -8,6 +8,7 @@ export default Ember.Controller.extend({
 	      this.set("newModel", {});
 	      model.save().then(()=>{
 	        this.transitionToRoute('monsters.monster.show', model);
+	        console.log('hahaasdf');
 	      });
 	    }
 	}
